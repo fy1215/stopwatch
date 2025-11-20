@@ -26,11 +26,36 @@ button {
     cursor: pointer;
     transition: all 0.2s;
 }
-button:hover{
+
+button:hover:not(:disabled) {
     opacity: .7;
     transform: translateY(4px);
 }
 
-button:active{
+button:active:not(:disabled) {
     background-color: darkgray;
+}
+
+#lap:disabled {
+    cursor: not-allowed;
+}
+
+#reset:disabled {
+    cursor: not-allowed;
+}
+
+#lapList {
+    max-height: 30px;
+    list-style: none;
+}
+
+#lapList li {
+    color: gray;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+#lapList li:first-child {
+    font-weight: bold;
+    color: black;
 }
