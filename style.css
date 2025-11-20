@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#time {
+    font-size: 10vh;
+}
+
+button {
+    border: 1px solid #333;
+    width: 200px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.2em;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+button:hover{
+    opacity: .7;
+    transform: translateY(4px);
+}
+
+button:active{
+    background-color: darkgray;
+}
