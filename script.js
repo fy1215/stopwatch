@@ -27,12 +27,12 @@ function changeButtonText(button, newText) {
 }
 
 start.addEventListener('click', () => {
+    if(timer) clearInterval(timer);
     if (start.textContent === 'スタート') {
         startTime = Date.now();
         changeButtonText(start, '一時停止');
         
     } else if (start.textContent === '一時停止') {
-        clearInterval(timer);
         stopTime = Date.now() - startTime;
         changeButtonText(start, 'リスタート');
         return;
@@ -41,9 +41,9 @@ start.addEventListener('click', () => {
         startTime = Date.now() - stopTime;
         changeButtonText(start, '一時停止');
     }
-    time.innerHTML = formatTime(Date.now() - startTime);
+    time.textContent = formatTime(Date.now() - startTime);
     timer = setInterval(() => {
-        time.innerHTML = formatTime(Date.now() - startTime);
+        time.textContent = formatTime(Date.now() - startTime);
     }, 1000);
 })
 
