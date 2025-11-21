@@ -59,3 +59,23 @@ button:active:not(:disabled) {
     font-weight: bold;
     color: black;
 }
+
+
+#lapList li:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
+}
+#lapList li {
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
